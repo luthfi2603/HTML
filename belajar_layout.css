@@ -1,0 +1,47 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@media only screen and (max-width: 720px) {
+    nav, article {
+        flex-direction: column !important;
+        width: 100% !important;
+        height: auto;
+    }
+}
+
+/* body {
+    color: white;
+} */
+
+header {
+    width: 100%;
+    height: auto;
+    text-align: center;
+    color: whitesmoke;
+    background-color: #31160E;
+    font-size: 35px;
+    padding: 1px;
+}
+
+nav {
+    color: whitesmoke;
+    float: left;
+    width: 30%;
+    height: auto;
+    background-color: #FF6A00;
+    padding: 5%;
+    text-align: justify;
+}
+
+article {
+    color: whitesmoke;
+    float: left;
+    width: 70%;
+    height: auto;
+    background-color: #DD0E01;
+    padding: 5%;
+    text-align: justify;
+}

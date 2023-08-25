@@ -1,0 +1,23 @@
+.img1{
+    width: 10cm;
+}
+
+.judul{
+    margin-left: 3cm;
+}
+.tabel{
+    text-align: center;
+}
+.tr1{
+    width: 10cm;
+}
+.form{
+    width: 50%;
+}
+.bc{
+    background-color: aqua;
+}
+input, textarea{
+    background-color: royalblue;
+    color: whitesmoke;
+}

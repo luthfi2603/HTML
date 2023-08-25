@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Validasi Form Jquery</title>
+    <link rel="shortcut icon" href="D:\Kuliah\TIF1105\Image\favicon.ico" type="image/x-icon">
+    <script src="D:\Plugin\bootstrap-4.6.2-dist\js\jquery.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Membuat Form Validasi Dengan JQuery (Tanpa Plugin) <br/> www.malasngoding.com</h1>
+    <div class="kotak">
+        <form method="POST" action="pindah.html" class="form">
+            <label for="nama">Nama</label> <br>
+            <input type="text" name="nama" id="nama" placeholder="Masukkan nama anda..."> <br>
+            <!-- class pesan-nama hanya diambil untuk membuat style display:block; -->
+            <span class="pesan pesan-nama">Isi nama anda!</span> <br>
+
+            <label for="umur">Umur</label> <br>
+            <input type="text" name="umur" id="umur" placeholder="Masukkan umur anda..."> <br>
+            <span class="pesan pesan-umur">Isi umur anda</span> <br>
+
+            <label for="hobi">Hobi</label> <br>
+            <input type="text" name="hobi" id="hobi" placeholder="Masukkan hobi anda..." autocomplete="on"> <br>
+            <span class="pesan pesan-hobi">Isi umur hobi</span> <br>
+
+            <button class="tombol" type="submit">Simpan</button>
+        </form>
+    </div>
+</body>
+<script type="text/javascript">
+	$(document).ready(function() {
+        // ketika disubmit, mengambil dari class form
+		$('.form').submit(function() {
+            // deklarasi variabel nama dan panjang nya
+			var nama = $('#nama').val().length;	
+			var umur = $('#umur').val().length;	
+			var hobi = $('#hobi').val().length;	
+            // cek jika tidak diisi
+			if(nama == 0){
+				$(".pesan-nama").css('display','block');
+				return false;
+			}if(umur == 0){
+                $(".pesan-umur").css('display','block');
+				return false;
+            }if(hobi == 0){
+                $(".pesan-hobi").css('display','block');
+				return false;
+            }
+		});
+	});
+</script>
+</html>

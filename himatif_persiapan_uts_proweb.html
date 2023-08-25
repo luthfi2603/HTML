@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UTS 20</title>
+    <link rel="shortcut icon" href="D:\Kuliah\TIF1105\favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <form action="" name="registrasi">
+        <table>
+            <tr style="text-align: center; color: blue;">
+                <th colspan="4">
+                    REGISTRASI UKM
+                </th>
+            </tr>
+            <tr>
+                <td>
+                    <label for="nama">
+                        Nama Lengkap *
+                    </label>
+                </td>
+                <td>
+                    <input type="text" name="nama" id="nama">
+                </td>
+                <td>
+                    Gender
+                </td>
+                <td>
+                    <input type="radio" name="gender" id="gender1" value="laki-laki">
+                    <label for="gender1">laki-laki</label> <br>
+                    <input type="radio" name="gender" id="gender2" value="perempuan">
+                    <label for="gender2">perempuan</label>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="tanggal">Tanggal lahir</label>
+                </td>
+                <td>
+                    <input type="date" name="tgl_lahir" id="tanggal">
+                </td>
+                <td>
+                    Hobby
+                </td>
+                <td>
+                    <input type="checkbox" name="hobi" id="1" value="Travelling">
+                    <label for="1">Travelling</label> <br>
+                    <input type="checkbox" name="hobi" id="2" value="Membaca">
+                    <label for="2">Membaca</label> <br>
+                    <input type="checkbox" name="hobi" id="3" value="Olahraga">
+                    <label for="3">Olahraga</label> <br>
+                    <input type="checkbox" name="hobi" id="4" value="dll">
+                    <label for="4">dll</label>
+                </td>
+            </tr>
+            <tr style="height: 20px;">
+
+            </tr>
+            <tr>
+                <td>
+                    <label for="alamat">
+                        Alamat *
+                    </label>
+                </td>
+                <td>
+                    <input type="textarea" name="alamat" id="alamat">
+                </td>
+                <td>
+                    Jurusan
+                </td>
+                <td>
+                    <select name="" id="">
+                        <option value="">
+                            &lt;&lt; Pilih salah satu &gt;&gt;
+                        </option>
+                        <option value="S1_ti">
+                            S1 Teknologi Informasi
+                        </option>
+                        <option value="S1_ilkom">
+                            S1 Ilmu Komputer
+                        </option>
+                        <option value="S2_ti">
+                            S2 Teknik Informatika
+                        </option>
+                        <option value="S3_ilkom">
+                            S3 Ilmu Komputer
+                        </option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="4" style="text-align: center;">
+                    <button onclick="proses()">
+                        Daftar
+                    </button>
+                    &nbsp;&nbsp;
+                    <input type="reset" value="Reset" onclick="return confirm('Yakin?')">
+                </td>
+            </tr>
+        </table>
+    </form>
+    <script>
+        function proses(){
+            nama = document.registrasi.nama.value
+            alamat = document.registrasi.alamat.value
+
+            if(nama == ""){
+                alert("Nama Anda Belum Diisi")
+            }else if(alamat == ""){
+                alert("Alamat Anda Belum Diisi")
+            }else{
+                alert("Data  Memenuhi Syarat")
+            }
+
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,46 @@
+* {
+    margin: 0;
+}
+
+body {
+	font-family: sans-serif;
+	background-color: darkgreen;
+}
+ 
+h1 {
+	color: white;
+    margin: 24px 0 24px 0;
+	text-align: center;	
+}
+ 
+input[type="text"] {
+	padding: 10px;
+	font-size: 12pt;
+    width: 276px;
+    margin-top: 8px;
+}
+ 
+.tombol {
+	padding: 10px;
+	font-size: 12pt;
+	background-color: lightgreen;
+	border: none;
+	color: #fff;
+}
+ 
+.kotak {
+	background-color: darkseagreen;
+	width: 300px;
+	padding:100px;
+	margin: 10px auto 24px auto;
+}
+ 
+.pesan {
+	display: none;
+	color: darkgreen;
+	margin: 10px;
+}
+
+label {
+    color: darkgreen;
+}

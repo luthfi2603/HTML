@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Latihan</title>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="latihan.css">
+</head>
+<body class="bc">
+    <h3 class="judul">Latihan HTML, CSS, & Java Script</h3>
+
+    <ol>
+        <p>
+            <li>
+                Ini adalah heading : 
+                <h1>
+                    H1
+                </h1>
+                <h2>
+                    H2
+                </h2> <br>
+                dan seterusnya ...
+            </li>
+        </p>
+        <p>
+            <li>
+                Cara memasukkan gambar : <br><br>
+                <img class="img1" src="D:\WallPaper\72f5vaskzcz71.jpg" alt="WallPaper">
+            </li>
+        </p>
+        <p>
+            <li>
+                Cara membuat hyper link : <br><br>
+                <a href="D:\Kuliah\TIF1105\Tugas 1\221402050_Tugas1_TIF1105.html">Click</a>
+            </li>
+        </p>
+        <p>
+            <li>
+                Cara membuat tabel : <br><br>
+                <table border="1" class="tabel">
+                    <tr>
+                        <th>
+                            No.
+                        </th>
+                        <th colspan="2" class="tr1">
+                            Nama
+                        </th>
+                        <th class="tr1">
+                            Asal Kota
+                        </th>
+                    </tr>
+                    <tr>
+                        <td>
+                            1.
+                        </td>
+                        <td>
+                            Muhammad
+                        </td>
+                        <td>
+                            Luthfi
+                        </td>
+                        <td>
+                            Medan
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            2.
+                        </td>
+                        <td>
+                            Andy
+                        </td>
+                        <td>
+                            Saragih
+                        </td>
+                        <td>
+                            Lubuk Pakam
+                        </td>
+                    </tr>
+                </table>
+            </li>
+        </p>
+        <p>
+            <li>
+                Cara Membuat Form : <br><br>
+                <center>
+                <form action="#" method="post" class="form">
+                    <fieldset>
+                        <legend style="margin-left: 6cm;">
+                            Latihan
+                        </legend>
+                            <table>
+                                <tr>
+                                   <td>
+                                        <label for="uname">
+                                            Username
+                                        </label>
+                                   </td>
+                                   <td>
+                                        <input type="text" name="Username" id="uname">
+                                   </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <label for="pass">
+                                            Password
+                                        </label>
+                                    </td>
+                                    <td>
+                                        <input type="password" name="Password" id="pass">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        Pilih
+                                    </td>
+                                    <td>
+                                        <input type="radio" name="rad" id="a">
+                                        <label for="a">a</label> <br>
+                                        <input type="radio" name="rad" id="b">
+                                        <label for="b">b</label> <br>
+                                        <input type="radio" name="rad" id="c">
+                                        <label for="c">c</label>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        Pilih
+                                    </td>
+                                    <td>
+                                        <input type="checkbox" name="a" id="a2">
+                                        <label for="a2">a</label> <br>
+                                        <input type="checkbox" name="b" id="b2">
+                                        <label for="b2">b</label> <br>
+                                        <input type="checkbox" name="c" id="c2">
+                                        <label for="c2">c</label> <br>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <label for="ta">Isi</label>
+                                    </td>
+                                    <td>
+                                        <textarea name="textarea" id="ta" cols="30" rows="10"></textarea>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <input type="submit">
+                                        <input type="reset" onclick="return confirm('Yakin?')">
+                                    </td>
+                                </tr>
+                            </table>
+                    </fieldset>
+                </form>
+                </center>
+            </li>
+        </p>
+        <p>
+            <li>
+                Cara membuat java script : <br>
+                <script>
+                    function tambah(){
+                        var a = 3;
+                        var b = a;
+                        c = a + b;
+                        document.write("hasil dari a + b = " +c)
+                    }
+                </script>
+                <input type="button" onclick="tambah()">
+            </li>
+        </p>
+    </ol>
+</body>
+</html>
