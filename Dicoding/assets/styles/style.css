@@ -98,6 +98,10 @@ nav ul {
     gap: 2rem;
 }
 
+.ukuran-gambar {
+    width: 100%;
+}
+
 @media screen and (max-width: 1200px) {
     main {
         flex-flow: column nowrap;
