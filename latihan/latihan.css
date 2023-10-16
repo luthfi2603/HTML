@@ -1,23 +1,32 @@
-.img1{
+.img1 {
     width: 10cm;
 }
 
-.judul{
+.judul {
     margin-left: 3cm;
 }
-.tabel{
+
+.tabel {
     text-align: center;
 }
-.tr1{
+
+.tr1 {
     width: 10cm;
 }
-.form{
+
+.form {
     width: 50%;
 }
-.bc{
-    background-color: aqua;
+
+.bc {
+    background-color: darkkhaki;
 }
-input, textarea{
+
+input, textarea {
     background-color: royalblue;
     color: whitesmoke;
+}
+
+ol li.test h1, ol li.test h2 {
+    color: tomato;
 }
