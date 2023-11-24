@@ -33,7 +33,7 @@ main {
     display: flex;
     flex-direction: column;
     padding: 16px;
-    border: 1px solid black;
+    border: 1px solid #7752FE;
     border-radius: 10px;
 }
 
@@ -65,7 +65,9 @@ main {
     display: block;
     width: 100%;
     padding: 8px;
-    border-radius: 5px;
+    border: 1px solid #ced4da;
+    border-radius: 0.25rem;
+    outline-color: #7752FE;
 }
 
 
@@ -92,7 +94,7 @@ main {
     flex-direction: column;
     align-items: center;
     padding: 16px;
-    border: 1px solid black;
+    border: 1px solid #7752FE;
     border-radius: 10px;
 }
 
@@ -115,7 +117,8 @@ main {
 
 .search_section > form > input {
     padding: 5px;
-    border-radius: 5px;
+    border-radius: 0.25rem;
+    border: 1px solid #ced4da;
 }
 
 .search_section > form > button {
@@ -128,7 +131,7 @@ main {
 
 .book_shelf {
     margin: 16px 0 0 0;
-    border: 1px solid black;
+    border: 1px solid #7752FE;
     padding: 16px;
     border-radius: 10px;
 }
@@ -143,7 +146,7 @@ main {
 
 .book_shelf > .book_list > .book_item {
     padding: 8px 16px 16px 16px;
-    border: 1px solid black;
+    border: 1px solid #7752FE;
     border-radius: 5px;
     margin: 10px 0;
 }
