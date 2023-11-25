@@ -1,5 +1,7 @@
 const books = [];
+const searchBooks = [];
 const RENDER_EVENT = 'render-book';
+const RENDER_EVENT_SEARCH = 'render-book-search';
 const STORAGE_KEY = 'BOOKSHELF_APPS';
 
 function generateId() {
@@ -40,7 +42,7 @@ function findBookIndex(todoId) {
  *
  * @returns boolean
  */
-function isStorageExist() /* boolean */ {
+function isStorageExist() {
     if (typeof (Storage) === undefined) {
         alert('Browser kamu tidak mendukung local storage');
         return false;
@@ -54,17 +56,17 @@ function isStorageExist() /* boolean */ {
  */
 function saveData() {
     if (isStorageExist()) {
-        const parsed /* string */ = JSON.stringify(books);
+        const parsed = JSON.stringify(books);
         localStorage.setItem(STORAGE_KEY, parsed);
     }
 }
 
 /**
  * Fungsi ini digunakan untuk memuat data dari localStorage
- * Dan memasukkan data hasil parsing ke variabel {@see books}
+ * Dan memasukkan data hasil parsing ke variabel @see books
  */
 function loadDataFromStorage() {
-    const serializedData /* string */ = localStorage.getItem(STORAGE_KEY);
+    const serializedData = localStorage.getItem(STORAGE_KEY);
     let data = JSON.parse(serializedData);
 
     if (data !== null) {
@@ -154,7 +156,7 @@ function addBook() {
     saveData();
 }
 
-function addBookToCompleted(todoId /* HTMLELement */) {
+function addBookToCompleted(todoId) {
     const todoTarget = findBook(todoId);
 
     if (todoTarget == null) return;
@@ -164,7 +166,7 @@ function addBookToCompleted(todoId /* HTMLELement */) {
     saveData();
 }
 
-function deleteBook(todoId /* HTMLELement */) {
+function deleteBook(todoId) {
     const todoTarget = findBookIndex(todoId);
 
     if (todoTarget === -1) return;
@@ -174,7 +176,7 @@ function deleteBook(todoId /* HTMLELement */) {
     saveData();
 }
 
-function undoBookFromCompleted(todoId /* HTMLELement */) {
+function undoBookFromCompleted(todoId) {
 
     const todoTarget = findBook(todoId);
     if (todoTarget == null) return;
@@ -186,7 +188,7 @@ function undoBookFromCompleted(todoId /* HTMLELement */) {
 
 document.addEventListener('DOMContentLoaded', function () {
 
-    const submitForm /* HTMLFormElement */ = document.getElementById('inputBook');
+    const submitForm = document.getElementById('inputBook');
 
     submitForm.addEventListener('submit', function (event) {
         event.preventDefault();
@@ -213,4 +215,38 @@ document.addEventListener(RENDER_EVENT, function () {
             uncompletedBookList.append(bookElement);
         }
     }
+});
+
+document.addEventListener(RENDER_EVENT_SEARCH, () => {
+    const uncompletedBookList = document.getElementById('incompleteBookshelfList');
+    const listCompleted = document.getElementById('completeBookshelfList');
+
+    uncompletedBookList.innerHTML = '';
+    listCompleted.innerHTML = '';
+
+    for (const bookItem of searchBooks) {
+        const bookElement = makeBook(bookItem);
+        if (bookItem.isCompleted) {
+            listCompleted.append(bookElement);
+        } else {
+            uncompletedBookList.append(bookElement);
+        }
+    }
+    searchBooks.length = 0;
+});
+
+function search(keyword){
+    for (const bookItem of books) {
+        if(bookItem.title.toLowerCase().includes(keyword.toLowerCase())){
+            searchBooks.push(bookItem);
+        }
+    }
+
+    document.dispatchEvent(new Event(RENDER_EVENT_SEARCH));
+}
+
+// live search
+let keyword = document.getElementById('searchBookTitle')
+keyword.addEventListener('keyup', () => {
+    search(keyword.value);
 });
